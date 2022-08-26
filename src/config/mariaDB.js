@@ -1,12 +1,17 @@
+// const options = {
+//     client: process.env.MARIADB_CLIENT,
+//     connection: {
+//         host: process.env.MARIADB_HOST,
+//         user: process.env.MARIADB_USER,
+//         pass: process.env.MARIADB_PASS,
+//         database: process.env.MARIADB_DATABASE
+//     }
+// };
+
 const options = {
     client: process.env.MARIADB_CLIENT,
-    connection: {
-        host: process.env.MARIADB_HOST,
-        user: process.env.MARIADB_USER,
-        pass: process.env.MARIADB_PASS,
-        database: process.env.MARIADB_DATABASE,
-        ssl: {rejectUnauthorized: false}
-    }
+    connectionString: process.env.DATABASE_URL,
+    ssl: {rejectUnauthorized: false}
 };
 
 module.exports = { options }
