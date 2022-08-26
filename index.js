@@ -18,8 +18,8 @@ const random = require('./src/routes/random')
 const { mongoConnection } = require('./src/config/mongodb');
 
 
-app.use(express.static(path.join(__dirname, '/public')));
-// app.use(express.static('public'));
+// app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
