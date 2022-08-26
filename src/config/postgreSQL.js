@@ -9,9 +9,8 @@
 // };
 
 const options = {
-    client: process.env.MARIADB_CLIENT,
-    connectionString: process.env.DATABASE_URL,
-    ssl: {rejectUnauthorized: false}
+    client: process.env.DATABASE_CLIENT || "pg",
+    connection: process.env.DATABASE_URL
 };
 
 module.exports = { options }

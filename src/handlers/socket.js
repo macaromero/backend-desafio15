@@ -1,4 +1,4 @@
-const {options} = require("../config/mariaDB");
+const {options} = require("../config/postgreSQL");
 const knex = require("knex")(options);
 
 const claseContenedor = require('../lib/class_contenedor');
