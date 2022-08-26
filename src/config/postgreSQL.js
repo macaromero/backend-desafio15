@@ -10,7 +10,7 @@
 
 const options = {
     client: process.env.DATABASE_CLIENT || "pg",
-    connectionString: process.env.DATABASE_URL,
+    connection: process.env.DATABASE_URL,
     ssl: {
         rejectUnauthorized: false
     }
