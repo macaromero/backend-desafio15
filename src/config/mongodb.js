@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const mongoConnection = async () => {
     try {
-        await mongoose.connect(process.env.MONGODB_CS, (error) => {
+        await mongoose.connect(process.env.MONGODB_CS, {serverSelectionTimeoutMS: 10000}, (error) => {
             console.log(error)
         });
         console.log("Conexión a base de datos mongodb establecida");
