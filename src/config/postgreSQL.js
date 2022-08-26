@@ -10,7 +10,10 @@
 
 const options = {
     client: process.env.DATABASE_CLIENT || "pg",
-    connection: process.env.DATABASE_URL
+    connectionString: process.env.DATABASE_URL,
+    ssl: {
+        rejectUnauthorized: false
+    }
 };
 
 module.exports = { options }
