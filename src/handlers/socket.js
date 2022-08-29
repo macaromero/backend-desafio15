@@ -12,24 +12,24 @@ const getNombre = (name) => {
 };
 
 const socketConfig = async (socket, sockets) => {
-    const getProducts = await claseProductos.getAll();
-    const getMessages = await claseChat.getAll();
+    // const getProducts = await claseProductos.getAll();
+    // const getMessages = await claseChat.getAll();
 
-    socket.emit('formProductos');
-    socket.emit('mensajes');
-    socket.emit('tablaProductos', getProducts);
-    socket.emit('chat', getMessages);
-    socket.emit('log', nombre);
+    // socket.emit('formProductos');
+    // socket.emit('mensajes');
+    // socket.emit('tablaProductos', getProducts);
+    // socket.emit('chat', getMessages);
+    // socket.emit('log', nombre);
 
-    socket.on('addProduct', async product => {
-        await claseProductos.save(product);
-        sockets.emit('tablaProductos', await claseProductos.getAll());
-    });
+//     socket.on('addProduct', async product => {
+//         await claseProductos.save(product);
+//         sockets.emit('tablaProductos', await claseProductos.getAll());
+//     });
 
-    socket.on('addMsj', async msj => {
-        await claseChat.save(msj);
-        sockets.emit('chat', await claseChat.getAll());
-    });
+//     socket.on('addMsj', async msj => {
+//         await claseChat.save(msj);
+//         sockets.emit('chat', await claseChat.getAll());
+//     });
 };
 
 module.exports = {socketConfig, getNombre};
