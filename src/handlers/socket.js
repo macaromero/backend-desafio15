@@ -12,8 +12,9 @@ const getNombre = (name) => {
 };
 
 const socketConfig = async (socket, sockets) => {
-    // const getProducts = await claseProductos.getAll();
+    const getProducts = await claseProductos.getAll();
     // const getMessages = await claseChat.getAll();
+    console.log(getProducts)
 
     // socket.emit('formProductos');
     // socket.emit('mensajes');
