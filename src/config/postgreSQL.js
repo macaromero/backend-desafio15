@@ -10,7 +10,7 @@
 
 const options = {
     client: process.env.DATABASE_CLIENT || "pg",
-    connection: process.env.DATABASE_URL,
+    connection: process.env.DATABASE_URL || 'postgresql://pgAdmin:1234@localhost:5432/desafios',
     ssl: {
         rejectUnauthorized: false
     }
